@@ -10,10 +10,10 @@ class HomeWorkMethods {
 	@Test
 	@DisplayName("test of the method compareTo")
 	void compareTo() {
-		String a = "String number 1";
-		String b = "String number 2";
+		String a = "123";
+		String b = "654";
 		int result = compareTo(a, b);
-		assertTrue(result < 0);
+		assertEquals (-5,result);
 	}
 	public int compareTo(String a,String b) {
 	return a.compareTo(b);
@@ -27,7 +27,7 @@ class HomeWorkMethods {
 		int result = compareToIgnoreCase(c, d);
 		assertEquals(0,result);
 	}
-	public int compareToIgnoreCase (String c,String d) {
+	int compareToIgnoreCase (String c,String d) {
 	return c.compareToIgnoreCase(d);
 	}
 	@Test
@@ -38,7 +38,7 @@ class HomeWorkMethods {
 		String result = e.concat(f);
 		assertEquals("Concat Test",result);
 	}
-	public static String concat (String c,String d) {
+	static String concat (String c,String d) {
 		return c.concat(d);
 	}
 	@Test
